@@ -1,10 +1,10 @@
 import React from 'react'
-import { Hero } from '../Components/Hero/Hero'
+import { CartItems } from '../Components/CartItems/CartItems'
 
 export const Cart = () => {
   return (
     <div>
-      Cart
+      <CartItems/>
     </div>
   )
 }
