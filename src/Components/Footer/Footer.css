@@ -1,56 +1,68 @@
-.footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
+/* Footer.css */
 
-.footer-logo{
+.footer {
+    margin-top: 10px;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 40px 20px; /* Padding top and bottom, smaller padding left and right */
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap:  20px;
-}
-
-.footer-logo p{
-    color: #383838;
-    font-size: 46px;
-    font-weight: 700;
-}
-.footer-links{
-    display: flex;
-    list-style: none;
-    gap: 50px;
-    color: #252525;
-    font-size: 20px;
-}
-.footer-links li{
-    cursor: pointer;
-}
-.footer-social-icon{
-    display: flex;
-    gap:20px;
-}
-.footer-icon-container{
-    padding: 10px;
-    padding-bottom: 6px;
-    background: #fbfbfb;
-    border: 1px solid #ebebeb;
-}
-.footer-copyright{
-    display: flex;
     flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap; /* Wrap items to next line if needed */
+    border-radius: 10px;
+  }
+  
+  .footer img {
+    max-width: 120px; /* Limit logo image width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .footer p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .footer-links {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+    display: flex;
+    flex-direction: row;
     gap: 30px;
-    width: 100%;
-    margin-bottom: 30px;
-    color: #1a1a1a;
-    font-size: 20px;
-}
-.footer-copyright hr{
-    width: 80%;
-    border: none;
-    border-radius: 16px;
-    height: 3px;
-    background: #c7c7c7;
-}
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .footer-social-icon {
+    display: flex;
+  }
+  
+  .footer-icon-containers {
+    margin-right: 15px;
+  }
+  
+  .footer-icon-containers img {
+    max-width: 40px; /* Limit social icon image size */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Smooth scale on hover */
+  }
+  
+  .footer-icon-containers img:hover {
+    transform: scale(1.2); /* Scale up on hover */
+  }
+  
+  .footer-copyright {
+    margin-top: 20px;
+    text-align: center;
+    color: #ccc; /* Light gray text color */
+  }
+  
+  .footer-copyright hr {
+    border-color: #666; /* Darker border color */
+  }
+  

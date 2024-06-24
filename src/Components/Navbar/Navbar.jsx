@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import './Navbar.css' 
-import logo from '../Assets/logo.png'
+import logo from '../Assets/nav-logo.svg'
 import cart_icon from '../Assets/cart_icon.png'
 import { Link } from 'react-router-dom';
 import { ShopContext } from '../../Context/ShopContext';
@@ -11,9 +11,9 @@ export const Navbar = () => {
   return (
     <div className='navbar'>
         <div className='nav-logo'>
-          <img src={logo} height="100px" alt=""/>
-          <p>SHOPPER </p>
+          <img src={logo} alt=""/>
         </div>
+
         <ul className='nav-menu'>
           <li onClick={()=>{setMenu("shop")}}><Link style={{textDecoration: 'none', color: 'inherit'}} to="/">Shop</Link>{menu=="shop"?<hr/>:<></>}</li>
           <li onClick={()=>{setMenu("mens")}}><Link style={{textDecoration: 'none', color: 'inherit'}} to="/mens">Men</Link>{menu=="mens"?<hr/>:<></>}</li>

@@ -1,27 +1,77 @@
-.popular{
+/* Popular.css */
+
+.popular {
+
+    max-width: 100%; /* Adjust width as per your design */
+    margin: 0 auto; /* Center align the component */
+    padding: 20px; /* Add padding for spacing */
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ccc; /* Border for container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  }
+  
+  .popular h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333; /* Dark text color */
+  }
+  
+  .popular hr {
+    border: none;
+    border-top: 1px solid #ddd; /* Light border line */
+    margin: 10px 0;
+  }
+  
+  .popular-item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four items per row */
+    gap: 20px; /* Gap between grid items */
+  }
+  
+  .popular-item .item {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    height: 90vh; 
-
-}
-
-.popular h1{
-    color: #171717;
-    font-size: 50px;
-    font-weight: 600;
-}
-
-.popular hr{
-    width: 200px;
-    height: 6px;
-    border-radius: 10px;
-    background: #252525;
-}
-
-.popular-item{
-    margin-top: 50px;
-    display: flex;
-    gap: 30px;
-}
+    background-color: #fff; /* White background for items */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners for items */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+    width: 250px;
+  }
+  
+  .popular-item .item img {
+    width: auto;
+    max-width: 100%; /* Ensure images don't exceed their container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Limit maximum height of images */
+    border-radius: 8px; /* Rounded corners for images */
+  }
+  
+  .popular-item .item .name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .popular-item .item .price {
+    font-size: 14px;
+    color: #888; /* Lighter text color for price */
+    margin-top: 5px;
+  }
+  
+  .popular-item .item .discount {
+    font-size: 12px;
+    color: #ff0000; /* Red color for discount price */
+    text-decoration: line-through; /* Strikethrough for old price */
+    margin-top: 5px;
+  }
+  @media (max-width: 768px) {
+    .popular-item {
+      grid-template-columns: repeat(2, 1fr); /* Two items per row on smaller screens */
+    }
+  }
+  

@@ -1,60 +1,96 @@
-.hero{
-    height: 100vh;
-    background: linear-gradient(180deg, #fed1ff,#e1ffea22 60%);
-    display: flex;
+/* Container */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background: linear-gradient(180deg, #fed1ff,#e1ffea22 80%);
+  box-shadow : 1px 1px 3px -1.5px#fed1ff;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom:15px ;
 }
-.hero-left{
-    flex:1;
-    display: flex;
+
+/* Left section */
+.hero-left {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Headline */
+.hero-left h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Text block */
+.hero-left-text {
+  margin-bottom: 20px;
+}
+
+.hero-left-text p {
+  font-size: 1.5rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Button */
+.hero-latest-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-latest-btn:hover {
+  background-color: #0056b3;
+}
+
+.hero-latest-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Right section */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-right img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left, .hero-right {
+    flex: none;
+    width: 100%;
+  }
+
+  .hero-left {
+    margin-bottom: 20px;
+  }
+
+  .hero-latest-btn {
     justify-content: center;
-    gap: 20px;
-    line-height: 1.1;
-    padding-left: 80px;
-}
-.hero-left h2{
-    color: #090909;
-    font-size: 26px;
-    font-weight: 600;
-}
-
-.hero-left p{
-    color: #171717;
-    font-size: 100px;
-    font-weight: 700;
-}
-
-.hero-hand-icon{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-}
-.hero-hand-icon img{
-    width: 105px;
-}
-
-.hero-latest-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    width: 310px;
-    height: 70px;
-    border-radius: 75px;
-    margin-top: 30px;
-    background: #ff4141;
-    color: white;
-    font-size: 22px;
-    font-weight: 500;
-}
-
-.hero-right{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.hero-right img{
-    width: 500px;
+  }
 }

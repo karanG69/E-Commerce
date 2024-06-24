@@ -1,44 +1,52 @@
-.offers{
-    margin-top: 100px;
-    background: linear-gradient(180deg,#fed1ff,#e1ffea22 60%);
+.offers {
     display: flex;
-}
-.offers-left{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-content: center;
-}
-
-.offers-left h1{
-    color: #171717;
-    font-size: 80px;
-    font-weight: 600;
-}
-
-.offers-left p{
-    color: #171717;
-    font-size: 22px;
-    font-weight: 600;
-}
-.offers-left button{
-    width:282px;
-    height: 70px;
-    border-radius: 35px;
-    background: #ff4141;
-    border: none;
-    color: white;
-    font-size: 22px;
-    font-weight: 500;
-    margin-top: 30px;
-    cursor: pointer;
-}
-
-.offers-right{
-    flex:1;
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-end;
-    padding-top: 50px;   
-}
+    padding: 20px;
+    background: linear-gradient(180deg, #fed1ff,#e1ffea22 80%);
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .offers-left {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .offers-left h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .offers-left p {
+    font-size: 1.2rem;
+    color: #777;
+  }
+  
+  .offers-left button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .offers-left button:hover {
+    background-color: #0056b3;
+  }
+  
+  .offers-right {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .offers-right img {
+    max-width: 100%;
+    height: auto;
+  }
+  
