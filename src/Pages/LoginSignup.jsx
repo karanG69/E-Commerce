@@ -3,7 +3,7 @@ import './CSS/LoginSignup.css';
 
 export const LoginSignup = () => {
 
-  const[state,setState] =useState("Sign Up");
+  const[state,setState] =useState("Login");
 
   const [formData,setFormData] = useState({
     username:"",
@@ -16,11 +16,48 @@ export const LoginSignup = () => {
   }
 
   const login = async () =>{
-    console.log("Login Function Executed")
+    console.log("Login Function Executed",formData);
+    let responseData;
+    await fetch('http://localhost:4000/login',{
+      method:'POST',
+      headers:{
+        Accept:'application/form-data',
+        'Content-Type':'application/json',
+      },
+      body: JSON.stringify(formData),
+    }).then((response)=> response.json()).then((data)=>responseData=data)
+
+    if(responseData.success){
+      localStorage.setItem('auth-token',responseData.token);
+      window.location.replace("/");
+    }
+
+    else{
+      alert(responseData.errors)
+    }
   }
 
   const signup = async () =>{
-    console.log("SignUp Function Executed")
+    console.log("SignUp Function Executed",formData);
+    let responseData;
+    await fetch('http://localhost:4000/signup',{
+      method:'POST',
+      headers:{
+        Accept:'application/form-data',
+        'Content-Type':'application/json',
+      },
+      body: JSON.stringify(formData),
+    }).then((response)=> response.json()).then((data)=>responseData=data)
+
+    if(responseData.success){
+      localStorage.setItem('auth-token',responseData.token);
+      window.location.replace("/");
+    }
+
+    else{
+      alert(responseData.errors)
+    }
+
   }
 
   return (
